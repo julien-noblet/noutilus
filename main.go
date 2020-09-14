@@ -95,7 +95,7 @@ func main() {
 		nbOperationInternal = int(nb)
 	}
 	btnRefresh := widget.NewButton("Calcul", func() {
-		operations := myApp.NewWindow("Calculus")
+		operations := myApp.NewWindow("Calculs")
 		ops := widget.NewVBox()
 		fmt.Println("On Changed!")
 		reste := number
@@ -126,7 +126,9 @@ func main() {
 				}
 			})
 			operation.container.Prepend(chooseOp)
-			operation.resultat, _ = lib.RandIntMax(reste)
+			if i < nbOperationInternal - 1 {
+				operation.resultat, _ = lib.RandIntMax(reste)
+			}
 			reste -= operation.resultat
 			operation.GetCalc()
 			ops.Append(operation.container)
