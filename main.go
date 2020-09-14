@@ -126,10 +126,13 @@ func main() {
 				}
 			})
 			operation.container.Prepend(chooseOp)
-			if i < nbOperationInternal - 1 {
+			if i < nbOperationInternal-1 {
 				operation.resultat, _ = lib.RandIntMax(reste)
+				reste -= operation.resultat
+			} else {
+				operation.resultat = reste
 			}
-			reste -= operation.resultat
+
 			operation.GetCalc()
 			ops.Append(operation.container)
 		}
