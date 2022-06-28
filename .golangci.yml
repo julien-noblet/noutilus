@@ -135,7 +135,6 @@ linters:
     - misspell
     - nakedret
     - nestif
-    - nlreturn 
     - nolintlint
     - prealloc
     - rowserrcheck
