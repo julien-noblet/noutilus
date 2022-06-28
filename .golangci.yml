@@ -109,7 +109,6 @@ linters:
     - exportloopref
     - exhaustive
     - funlen
-    - gci
     - gochecknoinits
     - goconst
     - gocognit
