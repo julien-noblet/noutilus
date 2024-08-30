@@ -96,6 +96,10 @@ func ConcatInt(s []int) int {
 }
 
 func RandIntMin(min int) (int, error) {
+	if min < 0 {
+		return 0, errors.New("min must be positive")
+	}
+
 	r, e := rand.Int(rand.Reader, big.NewInt(int64(min)))
 	if e != nil {
 		return 0, e
