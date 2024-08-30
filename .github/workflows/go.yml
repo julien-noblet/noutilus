@@ -16,6 +16,8 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
+    - name: install libgl1-mesa-dev and xorg-dev
+      run: sudo apt update && sudo apt install -y libgl1-mesa-dev xorg-dev
     - name: Set up Go
       uses: actions/setup-go@v4
       with:
