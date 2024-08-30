@@ -154,7 +154,7 @@ func main() {
 		scrambledWord.SetText(scrambled)
 		number = lib.ConcatInt(lib.Numerize(scrambled, motMystere))
 	}
-	motMystereBox := container.NewVBox(container.NewHBox(motMystereLabel, motMystereInput), motMystereInputSize)
+	motMystereBox := container.NewVBox(container.NewVBox(motMystereLabel, motMystereInput), motMystereInputSize)
 	container := container.NewVBox(title, motMystereBox, scrambleTable, nbOperationContainer, btnRefresh, operations)
 
 	w.SetContent(container)
